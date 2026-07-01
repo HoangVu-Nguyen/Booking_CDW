@@ -98,7 +98,7 @@ public class BookingServiceImpl implements BookingService {
     private final VoucherTemplateRepository voucherTemplateRepository;
     private final HostVoucherApplyScopeRepository hostVoucherApplyScopeRepository;
 
-    @Value("${app.frontend.url:https://localhost:4200}")
+    @Value("${app.frontend.url:https://fe.vunguyen.tokyo}")
     private String frontendUrl;
     @Override
     public boolean existsActiveBooking(Long userId, Long homestayId) {
