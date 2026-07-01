@@ -551,6 +551,9 @@ public class HomestayServiceImpl implements HomestayService {
 
         Homestay homestay = homestayRepository.findById(id)
                 .orElseThrow(() -> new AppException(ResultCode.HOMESTAY_NOT_FOUND));
+        if(homestay.getStatus() != HomestayStatus.APPROVED) {
+            return new HomestayDetailResponse();
+        }
 
         List<HomestayImage> homestayImages =
                 homestayImageRepository.findByHomestayId(homestay.getId());
