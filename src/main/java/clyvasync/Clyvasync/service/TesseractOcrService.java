@@ -25,6 +25,7 @@ public class TesseractOcrService {
 
 
             tesseract.setDatapath("/usr/share/tesseract-ocr/5/tessdata");
+           // tesseract.setDatapath("/usr/share/tesseract-ocr/5/tessdata");
             tesseract.setLanguage("vie");
 
 
