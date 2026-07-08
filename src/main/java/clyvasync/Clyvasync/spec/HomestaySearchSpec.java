@@ -91,7 +91,7 @@ public class HomestaySearchSpec {
 
             // 6. STATUS (Bỏ check deletedAt nếu DB không có, hoặc đảm bảo status là AVAILABLE)
             predicates.add(cb.isNull(root.get("deletedAt")));
-            predicates.add(cb.equal(root.get("status"), "AVAILABLE"));
+            predicates.add(cb.equal(root.get("status"), "APPROVED"));
 
             // Thay đoạn log cũ bằng đoạn này
             log.info("DEBUG: Generated predicates count: {}", predicates.size());

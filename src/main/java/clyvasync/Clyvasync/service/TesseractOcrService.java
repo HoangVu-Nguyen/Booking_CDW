@@ -18,12 +18,10 @@ public class TesseractOcrService {
             BufferedImage image = ImageIO.read(is);
             if (image == null) throw new RuntimeException("Không thể đọc ảnh.");
 
-            System.setProperty("jna.library.path", "/opt/homebrew/lib");
 
             ITesseract tesseract = new Tesseract();
 
             //tesseract.setDatapath("/opt/homebrew/share/tessdata");
-            System.setProperty("TESSDATA_PREFIX", "/usr/share/tesseract-ocr/5/tessdata/");
 
 
             tesseract.setDatapath("/usr/share/tesseract-ocr/5/tessdata");
